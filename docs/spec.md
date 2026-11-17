@@ -30,19 +30,19 @@ Wszystko musi działać na wcześniej przygotowanych parach, bez ręcznego wpisy
 ## 4. Raport
 - **PNG**: obraz badany z zaznaczonymi ramkami (numery jak na ekranie).
 - **JSON (pełny zestaw z 01)**: identyfikator kontroli, miejsce kontroli, przedmiot kontroli, urządzenie, identyfikatory obrazu wzorcowego i badanego, czas analizy, werdykt, ramki (x, y, szer., wys., **pewność — tylko tu, nie na ekranie**).
-- **Partie (wiersz poleceń, bez ekranu)**: `python -m rtg.partia <folder_par | lista.txt> --wyj <folder>`; wejście: folder z parami (`wzorzec_*.bmp` + `badany_*.bmp`) albo lista par w pliku tekstowym (wzorzec;badany); wynik: JSON + PNG na parę (nazwa komendy do potwierdzenia przez Programistę, zał.). Kompresja = nakładka PNG lub zmniejszony podgląd; plik oryginalny bez zmian. Wartości metadanych syntetyczne lub z pól ekranu (zał.).
+- **Partie (wiersz poleceń, bez ekranu)**: `python -m rtg.partia <wejście> --wyj <folder>`; wejście: `manifest.json` z generatora, `lista.txt` (wiersz `wzorzec;badany`) albo folder z podfolderami po jednej parze; wynik: JSON + PNG na parę. Kompresja = nakładka PNG lub zmniejszony podgląd; plik oryginalny bez zmian. Wartości metadanych syntetyczne lub z pól ekranu (zał.).
 
 ## 5. Kryteria akceptacji (z `02-discover.md`, progi Szefa 17:33; PRD §4 zgodne)
 **Zakres twardych kryteriów**: pary pusty/„przed” z dodatkiem w pojeździe; „paczka na podłodze” to też dodatek (liczy się do FN i do 50 + 50).
 1. **FP = 0** na czystych obrazach (zbiór strojeniowy 50 + kontrolny 50).
 2. **FN ≤ 10%** ogółem i **≤ 20% dla małych skrytek** (ramka < 1% pola obrazu); wskazanie = pokrycie ≥ 50% ramki dodatku lub IoU ≥ 0,3 (Programista 17:15).
-3. Zbiory: strojeniowy 50 + 50, kontrolny 50 + 50 (inne parametry generatora); **rozjazd** FP lub FN > 10 pkt proc. = porażka założenia (a).
-4. **< 1 min na obraz ~50 MB** (mediana i p95), zbiór kontrolny (100 par) przetworzony z wiersza poleceń **bez awarii**; narzędzie działa **bez sieci**.
+3. Zbiory (oba 50 + 50, generator Programisty): strojeniowy `--ziarno 17 --przes 6 --rozciag 0.01`, kontrolny `--ziarno 1017 --przes 10 --rozciag 0.015`; **rozjazd** FP lub FN > 10 pkt proc. = porażka założenia (a).
+4. **< 1 min na obraz ~50 MB** (mediana i p95) — pomiar czasu na 10 parach z kontrolnego w pełnym rozmiarze `--szer 12000 --wys 4200` (~50 MB), na mocniejszej maszynie obliczeniowej (zapasowo na biurowej); użyta maszyna wpisana w README. FP/FN i rozjazd liczone na 1200×400. Zbiór kontrolny (100 par, liczony na `manifest.json`) przetworzony przez `python -m rtg.partia` **bez awarii**; narzędzie działa **bez sieci**.
 5. Ekran: werdykt widoczny bez przewijania; przełącznik nakładki działa; ramki zgodne z JSON (pewność tylko w JSON); raport zapisuje się (PNG + JSON).
 6. Demo z §3 mieści się w < 2 min.
 7. Czytelność (założenie c): osoba bez wyjaśnień odpowiada „co tu jest podejrzane?” w < 10 s.
-9. Wynik na zbiorze testowym na ekranie zawiera wszystkie wartości z §2 (strojeniowy, kontrolny, FP, FN, FN małych, rozjazd, mediana, p95).
-8. Para z towarem zgodnym ze zgłoszeniem (eksperyment 5 z 02): **mierzona i raportowana jako ograniczenie** — osobny wiersz na ekranie wyniku i w README; nie warunek gotowości. Ukrycie w samym towarze poza v1.
+8. Wynik na zbiorze testowym na ekranie zawiera wszystkie wartości z §2 (strojeniowy, kontrolny, FP, FN, FN małych, rozjazd, mediana, p95).
+9. Para z towarem zgodnym ze zgłoszeniem (eksperyment 5 z 02; generator `--towar`, 20 par: 10 bez dodatku, 10 z dodatkiem; towar na wzorcu „przed” i na badanym w innym ułożeniu; FP = alarm na parze bez dodatku, FN jak w pkt 2): **mierzona i raportowana jako ograniczenie** — osobny wiersz na ekranie wyniku i w README; nie warunek gotowości. Ukrycie w samym towarze poza v1.
 
 ## 6. Ryzyka (najryzykowniejsze założenia z `/discover`)
 - **(b) Wyrównanie**: bazowo FP 100% (z rozciągnięciem), 20% bez — najsłabsze miejsce; kolejność prac: najpierw wyrównanie i ocena (FP), ekran na udawanych danych równolegle.
