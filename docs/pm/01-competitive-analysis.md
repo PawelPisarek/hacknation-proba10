@@ -6,8 +6,8 @@
 ## Kontekst (krok 1 skilla)
 - **Produkt**: narzędzie porównujące obraz RTG badanego pojazdu z wzorcem, zaznaczające różnice i dające raport (nakładka PNG + JSON z ramkami i pewnością — decyzja Szefa 17:16). Wejście: .bmp ~50 MB, partie, docelowo bez chmury.
 - **Użytkownik (Artur w pokoju, 17:17)**: operator RTG przy skanerze; problem: małe skrytki przeoczone i dużo oglądania; zysk: od razu zaznaczone miejsca różnic względem wzorca, mało fałszywych alarmów.
-- **Rola narzędzia (pytanie 2, 17:18; stan: czeka na Artura do 17:28, do tego czasu obowiązuje rekomendacja)**: zadanie §3 każe działać „samodzielnie, bez interwencji człowieka”, a §1 mówi o wsparciu operatora. Rozstrzygnięcie: **automat sam analizuje pary/grupy obrazów i wydaje werdykt alarm / brak alarmu z ramkami; decyzję o kontroli fizycznej zawsze podejmuje operator** (narzędzie nie zleca kontroli). Powód: spełnia §3 i nie zastępuje decyzji funkcjonariusza.
-- **Wzorzec (pytanie 3, 17:18; stan: j.w.)**: §7 mówi o parach/grupach „przed i po” załadunku, a wstęp o ukryciu także w samym towarze. Rozstrzygnięcie (rekomendacja): **wzorzec = obraz tego samego typu pojazdu pustego albo tego samego pojazdu „przed” załadunkiem**; dla „po” różnice wynikające z towaru zgłoszonego (kształt/gęstość spodziewanego ładunku) **nie są alarmem**; alarm dla dodatku spoza konstrukcji i spoza typowego towaru (np. mała skrytka w ramie, burcie, podłodze). Ukrycie w samym towarze to zakres po v1 (wymaga wzorca towaru) — ryzyko, nie obietnica. Zbiór syntetyczny Programisty zawiera tylko pustą naczepę vs badany z dodatkami.
+- **Rola narzędzia (pytanie 2, Artur w pokoju 17:19: „samo może orzec” — przyjęte)**: zadanie §3 każe działać „samodzielnie, bez interwencji człowieka”, a §1 mówi o wsparciu operatora. Rozstrzygnięcie: **automat sam analizuje pary/grupy obrazów i wydaje werdykt alarm / brak alarmu z ramkami; decyzję o kontroli fizycznej zawsze podejmuje operator** (narzędzie nie zleca kontroli). Powód: spełnia §3 i nie zastępuje decyzji funkcjonariusza.
+- **Wzorzec (pytanie 3, Artur w pokoju 17:20: „tak” — przyjęte)**: §7 mówi o parach/grupach „przed i po” załadunku, a wstęp o ukryciu także w samym towarze. Rozstrzygnięcie (rekomendacja): **wzorzec = obraz tego samego typu pojazdu pustego albo tego samego pojazdu „przed” załadunkiem**; dla „po” różnice wynikające z towaru zgłoszonego (kształt/gęstość spodziewanego ładunku) **nie są alarmem**; alarm dla dodatku spoza konstrukcji i spoza typowego towaru (np. mała skrytka w ramie, burcie, podłodze). Ukrycie w samym towarze to zakres po v1 (wymaga wzorca towaru) — ryzyko, nie obietnica. Zbiór syntetyczny Programisty zawiera tylko pustą naczepę vs badany z dodatkami.
 - **Metadane (zadanie §9)**: wyniki mają trafiać do repozytorium z przypisaniem do **miejsca i przedmiotu kontroli**, obrazy pochodzą z urządzeń Nuctech i Multicontrol. Raport (JSON) zawiera więc: identyfikator kontroli, miejsce kontroli, przedmiot kontroli (pojazd/typ), urządzenie (Nuctech/Multicontrol), identyfikatory obrazu wzorcowego i badanego, czas analizy, werdykt, ramki z pewnością. Na hackathonie wartości syntetyczne/podane ręcznie (zał.).
 - **Ograniczenia z zadania**: ocena po FP na „czystych” i FN na obrazach z „dodatkami”, innowacyjność, skalowalność; < 1 min/obraz; ochrona danych KAS; własny zbiór syntetyczny.
 
@@ -77,8 +77,8 @@ Oś X: wymaga znanej klasy ↔ wykrywa dowolną zmianę względem wzorca; oś Y:
 
 ## Hipotezy / ustalenia z Arturem
 - ✔ Użytkownik, problem, zysk (17:17, „ok”): operator RTG przy skanerze; małe skrytki przeoczone i dużo oglądania; zysk — zaznaczone miejsca różnic i mało fałszywych alarmów.
-- ⏳ Rola narzędzia (alarm + ramki, decyduje operator) — pytanie 2, termin 17:28.
-- ⏳ Wzorzec (pusty / „przed”; towar nie jest alarmem) — pytanie 3, termin 17:28.
+- ✔ Rola narzędzia (alarm + ramki, decyduje operator) — pytanie 2, Artur w pokoju 17:19.
+- ✔ Wzorzec (pusty lub „przed”; towar zgodny ze zgłoszeniem nie jest alarmem) — pytanie 3, Artur w pokoju 17:20.
 - Do `/discover`: wybór metody według kryterium powyżej; ukrycie w towarze jako ryzyko.
 
 ## Źródła (wyniki wyszukiwania z 2026-11-17; strony nie otwierane w całości)
