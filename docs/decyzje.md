@@ -13,3 +13,4 @@
 - 17:16 Szef: krok 1a — znacznik `<!-- skill: przeplywy-pm -->` jest w docs/pm/01; start recenzji przejścia 1a (Analityk, runda 1, 01 vs zadanie.md).
 - 17:16 Szef: krok 0 bez skilla — znacznik „skill: brak” w materialy.md wystarcza (krok 0 nie jest w łańcuchu).
 - 17:17 Artur w pokoju (podpis „Opera on Mac”), odp. na pytanie 1: „ok” = rekomendacja przyjęta. Użytkownik: operator RTG przy skanerze; problem: małe skrytki przeoczone, dużo oglądania; zysk: od razu zaznaczone miejsca różnic względem wzorca, mało fałszywych alarmów.
+- 17:17 Szef: recenzja przejścia 1a, runda 1 (Analityk): 5 braków (autonomia vs wsparcie operatora; wzorzec pusty vs „przed/po” i towar; metadane kontroli z §9 w JSON; metoda bez wyniku bazowego i kryterium FN; źródła i nieaktualne hipotezy) → poprawka Projektanta.
