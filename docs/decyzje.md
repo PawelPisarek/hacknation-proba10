@@ -22,3 +22,4 @@
 - 17:20 Szef: pętla 1a zamknięta po 2 rundach (Analityk, runda 2: „brak braków zmieniających zakres lub kryteria”); start 1b /discover (Projektant).
 - 17:20 Artur w pokoju (Opera on Mac), odp. na pytanie 3: „tak” — przyjęta rekomendacja: wzorzec = ten sam typ pojazdu pusty lub „przed” załadunkiem; towar zgodny ze zgłoszeniem nie jest alarmem; alarm tylko na dodatek spoza konstrukcji i spoza typowego towaru.
 - 17:20 Projektant → Artur w pokoju, pytanie 4 (krok b, /discover): z 10 pomysłów wybrać 1–2 do dalszej pracy. Rekomendacja: (1) alarm z ramkami na badanym obrazie + (2) widok wzorzec obok badanego z nakładką różnic (raport z miejscem i przedmiotem kontroli jest częścią 1). Czeka do 10 min od 17:20.
+- 17:21 Szef: pytanie Paweł (kto jest kim, 17:11) — bez odpowiedzi Paweł: rekomendacja — Paweł i Artur na urządzeniu „Opera on Mac” (Paweł gra Artura).
