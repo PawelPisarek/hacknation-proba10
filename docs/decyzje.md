@@ -4,3 +4,4 @@
 - 17:11 Szef: brak obrazów KAS — budujemy własny syntetyczny zbiór .bmp (naczepy „czyste” i z „dodatkami”); ciężkie liczenie przez orkiestrator na OMENa (w tej próbie Programista bez OMENa).
 - 17:11 Szef: zakres próby — krok 0 (Analityk), łańcuch /competitive-analysis → /discover → /write-prd z recenzją przejścia (Analityk) i recenzją odbiorcy (Programista); Programista obok: krok 0P; Prezenter nie pracuje.
 - 17:11 Szef: pytanie Paweł: kto jest kim (podpisy urządzeń) — rekomendacja: Paweł i Artur na urządzeniu Szefa (jak w próbie 9); odpowiedź do 17:21.
+- 17:13 Projektant → Artur w pokoju, pytanie 1 (krok a): kto jest głównym użytkownikiem, jaki ma problem, co zyska. Rekomendacja: operator RTG przy skanerze; problem: małe skrytki przeoczone i dużo oglądania; zysk: pokazane miejsca różnic na wzorcu, mało fałszywych alarmów. Czeka na odpowiedź do 17:23.
