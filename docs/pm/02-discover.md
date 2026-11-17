@@ -39,7 +39,7 @@
 7. **Czytelność dla operatora**: ekran pokazany jednej osobie bez wyjaśnień; pytanie „co tu jest podejrzane?” — odpowiedź w < 10 s.
 
 ## 5. Wejście do `/write-prd`
-- Zakres v1: pomysły 1 i 2 (+ raport z 5). Poza zakresem: 3, 4, 6–10, ukrycie w towarze.
+- Zakres v1: pomysły 1 i 2 (+ raport z 5). Poza zakresem: 3, 4, 6–10; ukrycie w samym towarze nie jest obietnicą v1 — eksperyment 5 mierzy to jako ograniczenie/ryzyko.
 - Kryteria akceptacji ze speca: **FP = 0 na czystych obrazach** (zadanie §6) i FN ogółem oraz osobno dla małych skrytek (`./run.sh`, zbiór strojeniowy i kontrolny bez wyraźnego rozjazdu); **< 1 min na obraz ~50 MB** i przetwarzanie partii (wiele par naraz); demo < 2 min; nakładka włącz/wyłącz; towar zgodny ze zgłoszeniem bez alarmu (test d).
 - **Raport JSON w v1 — pełny zestaw z 01**: identyfikator kontroli, miejsce kontroli, przedmiot kontroli, urządzenie (Nuctech/Multicontrol), identyfikatory obrazu wzorcowego i badanego, czas analizy, werdykt, ramki z pewnością (wartości metadanych syntetyczne/ręczne — zał.). Wybór „1 i 2” dotyczył ekranu, nie skracania raportu.
 - Do ustalenia z Arturem przed speca: ekran główny, ścieżka, co w demo (krok c).
