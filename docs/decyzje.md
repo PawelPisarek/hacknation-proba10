@@ -32,3 +32,4 @@
 - 17:33 Szef: recenzja przejścia 1b, runda 2 (Analityk): 3 braki (towar — kryterium czy ograniczenie; brak progu FN i definicji małej skrytki; „rozjazd” zbiorów niemierzalny) → poprawka Projektanta.
 - 17:33 Szef (rozstrzygnięcie, wg Artura 17:20 i zadania): twarde kryteria v1 tylko dla par pusty/„przed” z dodatkami w konstrukcji; para z towarem zgodnym = test mierzony i raportowany jako ograniczenie (nie warunek gotowości); ukrycie w samym towarze poza v1 — bez wymogu wskazania.
 - 17:33 Szef: progi akceptacji v1: FP = 0 na czystych; FN ≤ 10% ogółem i ≤ 20% dla małych skrytek; mała skrytka = ramka < 1% pola obrazu. Zbiory: strojeniowy 50 czystych + 50 z dodatkami, kontrolny (inne parametry generatora) 50 + 50; rozjazd = różnica FP lub FN > 10 pkt proc.
+- 17:33 Szef: 02 poprawione po rundzie 2 (znacznik jest); runda 3 recenzji przejścia 1b (Analityk).
